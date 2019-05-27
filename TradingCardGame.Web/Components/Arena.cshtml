@@ -1,0 +1,57 @@
+﻿@using TradingCardGame.Domain;
+
+@functions {
+Player playerOne { get; set; }
+Player playerTwo { get; set; }
+Match match { get; set; }
+
+protected override void OnInit()
+{
+    playerOne = new Player("Me");
+    playerTwo = new Player("Ennemi");
+    match = new Match(playerOne, playerTwo);
+}
+
+void EndTurn()
+{
+    match.EndTurn();
+}
+
+string EndMatch()
+{
+    if (playerOne.Health <= 0)
+    {
+        return playerTwo.Name + " Won!";
+    }
+    else
+    {
+        return playerOne.Name + " Won!";
+    }
+    this.StateHasChanged();
+}
+}
+
+<div class="arena">
+    <div class="enemi-side">
+        <Deck IsMine="false" />
+        <Hand Player="playerTwo" IsVisible="true" CurrentMatch="match" />
+        <PlayerBadge player="playerTwo" IsActive="@(playerTwo == match.ActivePlayer)" />
+    </div>
+    <div class="ring">
+    </div>
+    <div class="allied-side">
+        <Hand Player="playerOne" IsVisible="true" CurrentMatch="match" />
+        <Deck IsMine="true" />
+        <PlayerBadge player="playerOne" IsActive="@(playerOne == match.ActivePlayer)" />
+    </div>
+</div>
+
+@if (match.IsOver)
+{
+    <p>@EndMatch();</p>
+    <button disabled>End Turn</button>
+}
+else
+{
+    <button onclick="@EndTurn">End Turn</button>
+}

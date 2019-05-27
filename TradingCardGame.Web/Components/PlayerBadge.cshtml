@@ -1,0 +1,21 @@
+﻿@using TradingCardGame.Domain;
+
+<div class="badge">
+    @if (IsActive)
+    {
+        <h1 class="isActivePlayer">@player.Name</h1>
+    }
+    else
+    {
+        <h1>@player.Name</h1>
+    }
+    <p class="health">Health: @player.Health</p>
+    <p class="mana">Mana: @player.Mana.Slots/@player.Mana.Total</p>
+</div>
+
+@functions {
+[Parameter]
+Player player { get; set; }
+[Parameter]
+bool IsActive { get; set; }
+}

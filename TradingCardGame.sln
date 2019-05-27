@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingCardGame.Domain", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingCardGame.Tests", "TradingCardGameTests\TradingCardGame.Tests.csproj", "{AA9F443C-EA69-4997-8019-E3C0383A8A02}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingCardGame.Web", "TradingCardGame.Web\TradingCardGame.Web.csproj", "{FD12D665-B233-4205-A9A1-49A77DC05D8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AA9F443C-EA69-4997-8019-E3C0383A8A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA9F443C-EA69-4997-8019-E3C0383A8A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA9F443C-EA69-4997-8019-E3C0383A8A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD12D665-B233-4205-A9A1-49A77DC05D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD12D665-B233-4205-A9A1-49A77DC05D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD12D665-B233-4205-A9A1-49A77DC05D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD12D665-B233-4205-A9A1-49A77DC05D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

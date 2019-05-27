@@ -1,7 +1,5 @@
 m https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-TradingCardGame.Web/
-
 # User-specific files
 *.rsuser
 *.suo

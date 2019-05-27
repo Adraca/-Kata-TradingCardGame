@@ -1,0 +1,19 @@
+﻿<div class="card">
+    @if (IsVisible)
+    {
+        <span class="card-value">@Value</span>
+    }
+    else
+    {
+        <span class="card-back"></span>
+    }
+</div>
+
+
+@functions {
+[Parameter]
+int Value { get; set; }
+
+[Parameter]
+bool IsVisible { get; set; }
+}

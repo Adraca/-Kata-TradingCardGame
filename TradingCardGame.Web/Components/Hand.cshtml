@@ -1,0 +1,28 @@
+﻿@using TradingCardGame.Domain
+
+<div class="hand">
+    @for (int i = 0; i < player.Hand.Count - 1; i++)
+    {
+        <div onclick="@(() => UseCard(i))">
+            <Card Value="player.Hand[i]" IsVisible="IsVisible" />
+        </div>
+    }
+</div>
+
+@functions {
+[Parameter]
+Player player { get; set; }
+[Parameter]
+bool IsVisible { get; set; }
+[Parameter]
+Match CurrentMatch { get; set; }
+
+void UseCard(int cardIndex)
+{
+    if (player == CurrentMatch.ActivePlayer)
+    {
+        CurrentMatch.PlayCard(cardIndex);
+        this.StateHasChanged();
+    }
+}
+}
